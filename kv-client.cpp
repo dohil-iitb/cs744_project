@@ -44,7 +44,7 @@ int main()
             params = { {"key",key}};
 
             auto res3 = cli.Post("/read",params);
-            cout<<res3->body<<endl;
+            cout<<"Value = " + res3->body<<endl;
         }
         else if(command == "delete")
         {
