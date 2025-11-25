@@ -26,7 +26,7 @@ void insert(PGconn *conn,const char *params[],string &answer)
     }
     PQclear(res);
     answer = "Insertion Done Successfully";
-    cout<<answer;
+    // cout<<answer;
 
 }
 
@@ -46,7 +46,7 @@ void read(PGconn *conn,const char *params[],string &answer)
         answer = "failed to read";
     }
     PQclear(res);
-    cout<<"Read Done Successfully";
+    // cout<<answer;
 
 }
 
@@ -66,7 +66,7 @@ void delete_op(PGconn *conn,const char *params[],string &answer)
         answer = "Delete Operation Failed";
     }
     PQclear(res);
-    cout<<answer;
+    // cout<<answer;
 }
 
 

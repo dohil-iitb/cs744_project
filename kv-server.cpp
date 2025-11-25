@@ -2,7 +2,7 @@
 #include "httplib.h"
 #include <unordered_map>
 
-#define CACHESIZE 2 // change it according to the memory available
+#define CACHESIZE 128000 // change it according to the memory available
 
 using namespace std;
 
@@ -23,6 +23,7 @@ int main()
   {
     auto key = req.get_param_value("key");
     auto value = req.get_param_value("value");
+    // cout<<key<<" "<<value;
     string answer = "Key = " + key + " Value = " + value;
     if(cache.find(key)==cache.end() && cache_full)
     {
